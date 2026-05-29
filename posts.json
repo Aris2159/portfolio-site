@@ -1,14 +1,8 @@
 [
   {
-    "slug": "Hello!",
-    "title": "HYE!",
-    "date": "2026-05-28",
-    "description": "Welcome to my corner of the web!"
-  },
-  {
-    "slug": "another-post",
-    "title": "Why Geocities Rules",
+    "slug": "Introduction",
+    "title": "An Introduction To My Blog, life on the web",
     "date": "2026-05-29",
-    "description": "An investigation."
+    "description": "Welcome to my corner of the web! Just an introduction to who I am and what this blog is about with this website."
   }
 ]
