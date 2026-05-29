@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'VT323';
+    src: url('../fonts/VT323-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: 'VT323', 'Comic Sans MS', sans-serif;
+    letter-spacing: 2px;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.about{
+    background-color: #FFE000;
+    padding: 15px 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    text-align: center;
+    font-size: 22px;
+}
+.skills{
+    background-color: #FFE000;
+    padding: 15px 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.profile-pic img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.profile-pic {
+  max-width: 900px;
+  margin: 20px auto 20px auto;
+  display: block;
+}

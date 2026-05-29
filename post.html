@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Post</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <script src="load-components.js"></script>
+</head>
+
+
+<body>
+    <div class="back-link">
+        <a href="blog.html">← Back to Blog</a>
+    </div>
+    <div id="post-content">Loading...</div>
+
+    <script>
+        const slug = new URLSearchParams(window.location.search).get('slug');
+
+        if (!slug) {
+            document.getElementById('post-content').innerHTML = 'Post not found.';
+        } else {
+            fetch(`blog/${slug}.md`)
+                .then(r => r.text())
+                .then(md => {
+                    document.getElementById('post-content').innerHTML = marked.parse(md);
+                    const h1 = document.querySelector('#post-content h1');
+                    if (h1) document.title = h1.textContent;
+                });
+        }
+    </script>
+</body>
+
+</html>

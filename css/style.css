@@ -1,0 +1,28 @@
+.navbar {
+    background-color: #000080;
+    border-bottom: 3px solid #ffff00;
+    padding: 6px 0;
+    text-align: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-family: "Comic Sans MS", cursive;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 4px 12px;
+    border: 2px outset #aaaaaa;
+    background-color: #c0c0c0;
+    color: #000000;
+    margin: 0 3px;
+}
+
+.navbar a:hover {
+    background-color: #ffff00;
+    border: 2px inset #aaaaaa;
+}
+
+.navbar a.active {
+    background-color: #008000;
+    color: #ffffff;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sehaj Vlogs</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/videos.css">
+    <script src="script.js"></script>
+    <script src="load-components.js"></script>
+</head>
+
+<body style="background-image: url('images/vlog.jpg'); background-repeat: repeat; background-size: cover;">
+    <div id="navbar-container"></div>
+
+    <div class="video-section">
+        <div class="video-header">
+            <h1>📺 Sehaj Vlogs 📺</h1>
+            <p>Watch my latest uploads and journey over time!</p>
+        </div>
+
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/Z1UWsBJ5HgU?si=2EnvgPrI4533tT0N" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="video-description">
+            Kittens Nap time
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script>
+        loadNavbar('navbar-container');
+        loadFooter('footer-container');
+    </script>
+</body>
+
+</html>

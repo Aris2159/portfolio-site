@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <script src="script.js"></script>
+    <script src="load-components.js"></script>
+</head>
+
+<body style="background-image: url('images/blog.jpg'); background-repeat: no-repeat; background-size: cover;"></body>
+
+<body>
+    <div class="blog-title">
+        <h1>📝 MY BLOG</h1>
+    </div>
+    <div class="blog-container">
+        <div id="post-list">Loading posts...</div>
+    </div>
+
+    <script>
+        fetch('posts.json')
+            .then(r => r.json())
+            .then(posts => {
+                // Sort newest first
+                posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+                const html = posts.map(post => `
+                    <div class="post-entry">
+                        <a href="post.html?slug=${post.slug}">${post.title}</a>
+                        <span class="date">${post.date}</span>
+                        <p>${post.description}</p>
+                    </div>
+                `).join('');
+
+                document.getElementById('post-list').innerHTML = html;
+            });
+    </script>
+</body>
+
+</html>

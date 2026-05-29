@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'VT323';
+    src: url('../fonts/VT323-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: 'VT323', 'Comic Sans MS', sans-serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+    line-height: 1.6;
+}
+
+.introduction{
+    background-color: #1c2f7a;
+    padding: 15px 20px 50px 20px;
+    font-size: 19.5px;
+    margin: 20px auto;
+    max-width: 900px;
+    text-align: center;
+    color: #ffffff;
+    line-height: 2;
+}
+.paragraph{
+    background-color: #1c2f7a;
+    padding: 15px 20px;
+    font-size: 24px;
+    margin: 20px auto;
+    max-width: 900px;
+    text-align: center;
+    color: #ffffff;
+}
+
+button {
+     font-family: 'VT323', 'Comic Sans MS', sans-serif;
+}
+
+.photo {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+}
+
+

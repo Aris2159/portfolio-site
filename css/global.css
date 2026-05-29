@@ -1,0 +1,84 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "VT323";
+    src: url("fonts/VT323-Regular.ttf") format("truetype");
+}
+
+.navbar {
+    background-color: #000080;
+    border-bottom: 3px solid #ffff00;
+    padding: 6px 0;
+    text-align: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-family: "VT323", "Comic Sans MS", monospace;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 1.6;
+    padding: 4px 12px;
+    border: 2px outset #aaaaaa;
+    background-color: #c0c0c0;
+    color: #000000;
+    margin: 0 3px;
+}
+
+
+.navbar a:hover {
+    background-color: #ffff00;
+    border: 2px inset #aaaaaa;
+}
+
+.navbar a.active {
+    background-color: #008000;
+    color: #ffffff;
+}
+.footer {
+    background-color: #000080;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+    font-family: "VT323", "Comic Sans MS", monospace;
+    font-size: 18px;
+    letter-spacing: 2px;
+    line-height: 1.6;
+    margin-top: auto;
+    position: relative;
+}
+
+.easter-egg {
+    color: #000080;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.easter-egg:hover {
+    color: #000080;
+}
+
+
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    margin-top: auto;
+}
