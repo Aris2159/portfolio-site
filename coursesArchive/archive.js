@@ -39,7 +39,7 @@ async function loadCourses() {
 
             button.onclick = () => {
                 window.open(
-                    `/course.html?course=${encodeURIComponent(course.name)}`,
+                    `/coursesArchive/course.html?course=${encodeURIComponent(course.name)}`,
                     "_blank"
                 );
             };

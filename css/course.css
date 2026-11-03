@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'VT323';
+    src: url('../fonts/VT323-Regular.ttf') format('truetype');
+}
+
+.box {
+    background-color: #02dfba;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+    margin: 20px auto;
+}
+
+/* Course number box */
+#course-title {
+    background-color: #FFB343;
+    color: #000000;
+    border: 3px solid #000000;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto 25px auto;
+    width: fit-content;
+    min-width: 200px;
+}
+
+/* Centre the folder and file buttons */
+#course-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 25px auto;
+}
+
+/* Individual folder buttons */
+#course-content button {
+    background-color: #FFB343;
+    color: #000000;
+    border: 2px solid #000000;
+    padding: 15px 25px;
+    min-width: 150px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+#course-content button:hover {
+    background-color: #dddddd;
+}
+
+/* Individual file links */
+#course-content a {
+    display: block;
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+    padding: 12px 20px;
+    text-decoration: none;
+}
+
+#course-content a:hover {
+    background-color: #dddddd;
+}
+
+/* Main archive navigation box */
+.archive-navigation {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+.archive-navigation a {
+    display: inline-block;
+    background-color: #FFB343;
+    color: #000000;
+    border: 3px solid #000000;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.archive-navigation a:hover {
+    background-color: #dddddd;
+}
+
+.folder-navigation {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#course-content {
+    text-align: center;
+}
