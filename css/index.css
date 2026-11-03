@@ -44,4 +44,13 @@ button {
     height: auto;
 }
 
+.email-link {
+    color: #d62828;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.email-link:hover {
+    color: #ff9900;
+}
 

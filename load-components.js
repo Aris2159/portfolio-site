@@ -1,7 +1,8 @@
+
 // Load navbar and footer from external files
 function loadComponents() {
     // Load navbar
-    fetch('navbar.html')
+    fetch('/navbar.html') // CHANGED: added /
         .then(response => response.text())
         .then(html => {
             const navbarContainer = document.createElement('div');
@@ -13,7 +14,7 @@ function loadComponents() {
     // Load footer only if not on home page
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     if (currentPage !== 'index.html') {
-        fetch('footer.html')
+        fetch('/footer.html') // CHANGED: added /
             .then(response => response.text())
             .then(html => {
                 const footerContainer = document.createElement('div');
@@ -35,6 +36,7 @@ function updateActiveNav() {
         }
     });
 }
+
 
 // Load components when DOM is ready
 document.addEventListener('DOMContentLoaded', loadComponents);
