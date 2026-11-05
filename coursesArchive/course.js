@@ -1,6 +1,4 @@
-
-const username = "Aris2159";
-const repository = "Courses";
+const API = "/.netlify/functions/github";
 
 const params = new URLSearchParams(window.location.search);
 const course = params.get("course");

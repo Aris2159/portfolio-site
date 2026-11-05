@@ -1,5 +1,4 @@
-const username = "Aris2159";
-const repository = "Courses";
+const API = "/.netlify/functions/github";
 
 async function loadCourses() {
 
