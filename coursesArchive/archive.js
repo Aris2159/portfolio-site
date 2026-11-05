@@ -6,9 +6,7 @@ async function loadCourses() {
 
     try {
 
-        const response = await fetch(
-            `https://api.github.com/repos/${username}/${repository}/contents/`
-        );
+        const response = await fetch(`${API}?type=list&path=`);
 
         if (!response.ok) {
             throw new Error("Could not retrieve courses");
@@ -16,9 +14,9 @@ async function loadCourses() {
 
         const files = await response.json();
 
-        // Find all folders in the root directory
+        // Find all folders in the root directory, skipping hidden ones like .github
         const courses = files
-            .filter(file => file.type === "dir")
+            .filter(file => file.type === "dir" && !file.name.startsWith("."))
             .sort((a, b) => a.name.localeCompare(b.name));
 
         // Clear loading message

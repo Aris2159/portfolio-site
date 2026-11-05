@@ -17,9 +17,9 @@ async function loadCourse() {
 
     try {
 
-        const url = `https://api.github.com/repos/${username}/${repository}/contents/${encodeURIComponent(course)}`;
-
-        const response = await fetch(url);
+        const response = await fetch(
+            `${API}?type=list&path=${encodeURIComponent(course)}`
+        );
 
         if (!response.ok) {
             throw new Error("Could not load course");
@@ -34,15 +34,10 @@ async function loadCourse() {
             .sort((a, b) => a.name.localeCompare(b.name));
 
         folders.forEach(folder => {
-
             const button = document.createElement("button");
-
             button.textContent = "📁 " + folder.name;
-
             button.onclick = () => loadFolder(folder.name);
-
             container.appendChild(button);
-
         });
 
         if (folders.length === 0) {
@@ -50,13 +45,10 @@ async function loadCourse() {
         }
 
     } catch (error) {
-
         console.error(error);
         container.textContent = "Unable to load course resources.";
-
     }
 }
-
 
 async function loadFolder(folder) {
 
@@ -64,9 +56,9 @@ async function loadFolder(folder) {
 
     try {
 
-        const url = `https://api.github.com/repos/${username}/${repository}/contents/${encodeURIComponent(course)}/${encodeURIComponent(folder)}`;
-
-        const response = await fetch(url);
+        const response = await fetch(
+            `${API}?type=list&path=${encodeURIComponent(course + "/" + folder)}`
+        );
 
         if (!response.ok) {
             throw new Error("Could not load folder");
@@ -89,31 +81,22 @@ async function loadFolder(folder) {
         );
 
         visibleFiles.forEach(file => {
-
             const link = document.createElement("a");
-
             link.textContent = "📄 " + file.name;
-            link.href = file.download_url || file.html_url;
+            link.href = `${API}?type=file&path=${encodeURIComponent(file.path)}`;
             link.target = "_blank";
             link.rel = "noopener noreferrer";
-
             container.appendChild(link);
-
         });
 
         if (visibleFiles.length === 0) {
-            container.appendChild(
-                document.createTextNode("No files found.")
-            );
+            container.appendChild(document.createTextNode("No files found."));
         }
 
     } catch (error) {
-
         console.error(error);
         container.textContent = "Unable to load files.";
-
     }
 }
-
 
 document.addEventListener("DOMContentLoaded", loadCourse);
